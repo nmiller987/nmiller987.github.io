@@ -1,5 +1,9 @@
 # nmiller987.github.io
 
+There are two sections: first, the Arch install, and then the Docker project.
+
+# Arch Install
+
 # Goals
 
 The following list is taken directly from the slides:
@@ -253,4 +257,32 @@ I add a couple aliases to the ~/.bashrc file:
 When I try to run these in the terminal, it doesn't work.
 Turns out I forgot to run 
 `source ~/.bashrc`, which solves the issue.
+
+
+
+# Docker Project
+
+# Starting Off
+
+I'm going to try to set up PiHole. A network-wide ad blocker sounds really nice, with how bad my YouTube ads have been getting. 
+
+First, I download the docker.desktop app for Windows.
+
+Then, I swap to the command prompt. I make a directory called `pihole` that I'll use for this project. 
+
+https://github.com/pi-hole/docker-pi-hole seems pretty useful. I set up a docker-compose.yml in my directory based off of the guide.
+
+When I try to run `docker-compose up -d`, I get hit with a weird error telling me that port 53 is not permitted, so now I have to figure that out.
+
+Upon further research, it seems like trying to set this up on Windows would be a huge pain. Opening port 53 would require me to disable Windows DNS Client, which I can't find a way to do. I'm just going to try doing this on my laptop with Ubuntu instead.
+
+# Ubuntu
+
+First off, I run `sudo apt-get update` and `sudo apt-get update`. I already have docker.io installed. 
+
+`sudo docker run -d -p 443:443 --name openvas mikesplain/openvas` to get the right container.
+
+Then, open up Firefox, and go to `https://localhost`. The Greenbone UI pops up, prompting for a username and password. The default for both fields is `admin`.
+
+To run a scan, I go to the Scans/Tasks page, then hit the magic want emoji in the top left. I accept the defaults, and then wait a while for the scan to run. 
 
