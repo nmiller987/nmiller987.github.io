@@ -1,6 +1,6 @@
 # nmiller987.github.io
 
-There are two sections: first, the Arch install, and then the Docker project.
+There are three sections: first, the Arch install, then the Docker project, and then finally the Digital Ocean VPN project.
 
 # Arch Install
 
