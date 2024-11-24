@@ -262,7 +262,7 @@ Turns out I forgot to run
 
 # Docker Project
 
-# Starting Off
+## Starting Off
 
 I'm going to try to set up PiHole. A network-wide ad blocker sounds really nice, with how bad my YouTube ads have been getting. 
 
@@ -276,7 +276,7 @@ When I try to run `docker-compose up -d`, I get hit with a weird error telling m
 
 Upon further research, it seems like trying to set this up on Windows would be a huge pain. Opening port 53 would require me to disable Windows DNS Client, which I can't find a way to do. I'm just going to try doing this on my laptop with Ubuntu instead.
 
-# Ubuntu
+## Ubuntu
 
 First off, I run `sudo apt-get update` and `sudo apt-get update`. I already have docker.io installed. 
 
